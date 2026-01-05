@@ -5,15 +5,13 @@ This project demonstrates a **complete GitOps workflow** using **Argo CD** and *
 
 ---
 
-## 🧠 What We Built (High-Level)
+## 🧠 What We Built
 
 * A local Kubernetes cluster using **Minikube**
 * **Argo CD** installed inside the cluster
 * A GitHub repository that stores Kubernetes manifests
 * An **Nginx application** deployed via **GitOps (Kustomize)**
 * Automatic sync from Git → Kubernetes
-
-No `kubectl apply` is used after setup. All changes flow through **Git commits**.
 
 ---
 
@@ -183,34 +181,6 @@ kubectl get svc -n nginx-dev
 * Rollbacks are done via **Git revert**
 * Argo CD handles drift & self-healing
 * Kustomize enables clean multi-env setup
-
----
-
-## 💬 Interview-Ready Explanation
-
-> "I implemented a GitOps workflow using Argo CD where Kubernetes continuously reconciles the cluster state with Git. Any change pushed to Git is automatically deployed, and rollbacks are handled via Git history."
-
----
-
-## 🚀 Possible Enhancements
-
-* Add `prod/` environment
-* Use Helm instead of raw YAML
-* Add sync waves
-* Add RBAC & security policies
-* Integrate monitoring (Prometheus)
-
----
-
-## 📸 Optional Diagram (for GitHub README)
-
-You can also add a static diagram image:
-
-```md
-![GitOps Flow](images/gitops-flow.png)
-```
-
-(Create the image manually or using draw.io and commit it under `images/`)
 
 ---
 
